@@ -14,7 +14,7 @@ node{
         sh 'docker build -t affan7/web_app .'
     }
 
-    stage('Deleting existing container'){
+    stage('Deleting existing container if exist'){
         sh 'docker stop java-web-app || true && docker rm java-web-app || true'
     }
     
